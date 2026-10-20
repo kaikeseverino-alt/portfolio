@@ -1,0 +1,86 @@
+body {
+    background-image: url("../imagem/hulk.gif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+h1{
+    color: #1a83c4;
+    font-size: 40px;
+
+}
+h2{
+    color:#14162B;
+
+}
+a {
+    color: #C4531A;
+    
+}
+footer {
+    text-align: center;
+    }
+main{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card{
+    background-color: rgb(229, 255, 0);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0, 30);
+}
+th, td{
+    border: 1px dashed #090a12;
+        padding: 24px;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+th {
+    background-color: white;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14162B;
+    padding: 16px 32px;
+}
+nav{
+    display: flex;
+    gap: 24px;
+
+}
+nav a {
+    color: white;
+    text-decoration: nome;
+}
+.meu{
+    color: #1a83c4;
+    background-color: #C4531A;
+    padding: 8px 16px;
+    border-radius: 20px;
+    
+}
+
+img{
+    max-width: 100%;
+}
+
+@media ( max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 8px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    
+}
