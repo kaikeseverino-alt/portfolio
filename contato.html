@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Contato|Kaike</title>
-     <link ref="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -21,7 +21,7 @@
 <main>
   <h1>Contato</h1>
   Fale comigo
-  <form>
+  <form id="formulario">
     <p>
        <label for="nome">Nome</label>
     <input type="text" id="nome" name="nome" required>
@@ -43,14 +43,16 @@
     </p>
     <p>
       <label for="mensagem">Mensagem</label>
-      <textarea id="mensagens" name="mensagem" rows="5"></textarea>
+      <textarea id="mensagem" name="mensagem" rows="5"></textarea>
     </p>
     <button type="submit">Enviar</button>
+    <p id = "resposta"> </p>
   </form>
 </main>
 <footer>
   <p>Kaike Sao Paulo </p>
 </footer>
+ <script src="js/contato.js"></script>
 </body>
 </html>
   </ul>

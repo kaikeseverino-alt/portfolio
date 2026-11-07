@@ -36,7 +36,7 @@ main{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0, 30);
 }
 th, td{
-    border: 1px dashed #090a12;
+    border: 1px dashed #040b3e;
         padding: 24px;
 }
 
@@ -80,6 +80,18 @@ img{
         gap: 24px
     }
 
+    .escuro {
+        background-color: #3a299a;
+        color: #C4531A;
+
+    }
+    .escuro .card {
+        background-color: #cebe0b;
+    }
+    
+    .escuro h2{
+        color:#0014f6;
+    }
 @media ( max-width: 600px) {
     header {
         flex-direction: column;
@@ -103,4 +115,23 @@ nav a:hover{
 .card:hover{
     transform: translateY(-6px);
     box-shadow: 0 10px 24px rbga (0,0,0,0,25);
+}
+ .erro {
+    color: #120909;
+ }
+.gostos {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.gostos li {
+  background-color: rgb(3, 1, 0);
+  color: var(--base-text);
+  box-shadow: 0.2rem 0.6rem 10px red;
+  padding: 1rem;
+  border-radius: 10px;
+  text-shadow: 0.1rem 0.1rem 5px blue;
 }
