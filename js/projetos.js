@@ -1,4 +1,4 @@
-const { createElement } =("react");
+
 
 const projetos =[
     {titulo: "portfolio", descricao: "meu site, com 4 paginas no ar"},
@@ -19,12 +19,36 @@ function criarCard(projeto) {
     card.appendChild(titulo);
     card.appendChild(texto);
     listaProjetos.appendChild(card);
+    
+   };
+
+const contagem = document.querySelector("#contagem");
+let todos = [];
+
+const mostrar = (lista) => {
+  listaProjetos.innerHTML = "";
+  for (const projeto of lista) {
+    criarCard(projeto);
+  }
+  const titulos = lista.map((projeto) => projeto.titulo);
+  contagem.textContent = `${lista.length} projetos: ${titulos.join(", ")}`;
 };
-    fetch("projetos.json")
-    .then((resposta) => resposta.json ()) 
-    .then((projetos) => {
-    for (const projeto of projetos){
-      criarCard(projeto);  
-    }
- });
-   
+
+const filtrar = (categoria) => {
+  const lista = todos.filter((projeto) => projeto.categoria === categoria);
+  mostrar(lista);
+};
+
+fetch("projetos.json")
+  .then((resposta) => resposta.json())
+  .then((projetos) => {
+    todos = projetos;
+    mostrar(todos);
+  });
+ const botaoTodos = document.querySelector("#filtro-todos");
+ const botaoPessoal = document.querySelector("#filtro-pessoal");
+ const botaoFigma= document.querySelector("#filtro-figma");
+ 
+botaoTodos.addEventListener("click", () => mostrar(todos));
+botaoPessoal.addEventListener("click", () => filtrar("pessoal"));
+botaoFigma.addEventListener("click", () => filtrar("figma"));   
